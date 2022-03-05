@@ -297,11 +297,11 @@ void table(char firstEl[], char secondEl[], int isEnd)
     {
         if (tot1 > tot2)
         {
-            printf("\n%s is winning the game\n\n", firstEl);
+            printf("\nLooks like %s is winning the game\n\n", firstEl);
         }
         else if (tot1 < tot2)
         {
-            printf("\n%s is winning the game\n\n", secondEl);
+            printf("\nLooks like %s is winning the game\n\n", secondEl);
         }
     }
 }
@@ -351,7 +351,7 @@ int main()
         }
         else if (choice == 4)
         {
-            table(player1Name, player2Name, 1);
+            table(player1Name, player2Name, 0);
             getchar();
             continue;
         }
@@ -363,7 +363,7 @@ int main()
 
         if (two)
         {
-            printf("press enter");
+            printf("Press enter again");
             getchar();
             player1 = randomNo(rand());
             for (int i = 0; i < 80; i++)
@@ -382,7 +382,7 @@ int main()
         }
         else
         {
-            for (int i = 0; i < 80; i++)
+            for (int i = 0; i < 30; i++)
             {
                 player1 = randomNo(i + 5);
                 chosenThingPrint(player1Name, player2Name, player1, player2);
